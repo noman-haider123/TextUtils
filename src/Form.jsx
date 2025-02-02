@@ -81,7 +81,7 @@ export default function Form({ fordata,size}) {
                 <div className="row justify-content-center">
                     <div className="col-md-6">
                     <h1>Your Text Summary</h1>
-                    <p>{name.length} Characters {name.split(" ").length-1} Words</p>
+                    <p>{name.length} Characters {name.split(" ").filter((noman)=>{return noman.length !== 0}).length} Words</p>
                     <p>{name.split(" ").length-1 * 0.005} Minutes</p>
                     <p>{name.length * 0.05} Seconds</p>
                     <h2>Prview</h2>
